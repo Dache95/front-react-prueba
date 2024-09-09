@@ -34,10 +34,15 @@ La aplicación está desplegada en [Netlify](https://www.netlify.com/) y puedes 
 Si deseas ejecutar esta aplicación en tu entorno local, sigue los siguientes pasos:
 
 1. Clona el repositorio:
-   [git clone https://github.com/tu-usuario/tu-repo.git](https://github.com/Dache95/front-react-prueba.git)
+   [git clone https://github.com/Dache95/front-react-prueba.git](https://github.com/Dache95/front-react-prueba.git)
+
+2. Accede al directorio del proyecto:
+   ```bash
    cd front-react-prueba
-   yarn install
-   yarn dev
+
+3. yarn install
+
+4. yarn dev
 
 
 
