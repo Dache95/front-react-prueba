@@ -7,13 +7,12 @@ const RequestsList = () => {
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  // Verificación mejorada
   if (!data) {
     return <p>No se encontraron solicitudes</p>;
   }
 
   if (!Array.isArray(data)) {
-    console.log("Invalid data format:", data);  // Solo si el formato es inválido
+    console.log("Invalid data format:", data);  
     return <p>Error en el formato de los datos</p>;
   }
 

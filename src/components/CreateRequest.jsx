@@ -8,7 +8,6 @@ const CreateRequest = () => {
         estado: ''
     });
 
-    // No necesitamos pasar una URL dinámica, solo usamos la URL inicial
     const { data, loading, error, fetchData } = useFetch('https://rest-api-prueba-production.up.railway.app/api/requests', {
         method: 'POST',
         headers: {
@@ -27,7 +26,6 @@ const CreateRequest = () => {
         e.preventDefault();
         console.log("Datos enviados:", formData);
 
-        // Aquí ya no pasamos la URL, solo las opciones del POST
         await fetchData(null, {
             method: 'POST',
             headers: {

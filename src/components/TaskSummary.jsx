@@ -2,17 +2,14 @@ import { useEffect, useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 
 const TaskSummary = () => {
-    // Estado para almacenar los conteos
     const [counts, setCounts] = useState({
         pendientes: 0,
         completadas: 0,
         urgentes: 0
     });
 
-    // Obtener todas las solicitudes
     const { data: requests, loading, error } = useFetch('https://rest-api-prueba-production.up.railway.app/api/requests', null, true);
 
-    // Contar el número de solicitudes en cada estado
     useEffect(() => {
         if (requests && Array.isArray(requests)) {
             const pendientes = requests.filter(request => request.estado === 'Pendiente').length;
